@@ -52,8 +52,11 @@
   .page { max-width: 1080px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-direction: column; gap: 40px; }
 
   .pr-label {
-    text-align: center; font-size: 11px; letter-spacing: .05em; color: var(--ink-faint);
+    display: inline-block; margin: 0 auto; font-size: 12px; font-weight: 700;
+    letter-spacing: .08em; color: var(--ink-soft); background: var(--surface-alt);
+    border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px;
   }
+  .pr-label-wrap { text-align: center; }
 
   header { position: relative; text-align: center; padding-bottom: 8px; }
   header::before {
@@ -108,7 +111,7 @@
 </head>
 <body>
 <div class="page">
-  <p class="pr-label">PR</p>
+  <p class="pr-label-wrap"><span class="pr-label">PR</span></p>
   <header>
     <div class="eyebrow">Brand Showcase</div>
     <h1>KOPHER &times; Anua &times; medicube</h1>
