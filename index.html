@@ -1,9 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beauty Trio Select</title>
+<meta name="description" content="KOPHER × Anua × medicube、今注目のスキンケア3ブランドをピックアップしてご紹介。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%84%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beauty Trio Select">
+<meta property="og:title" content="Beauty Trio Select">
+<meta property="og:description" content="KOPHER × Anua × medicube、今注目のスキンケア3ブランドをピックアップしてご紹介。">
+<meta property="og:url" content="https://torihada-biz.github.io/ppl-select.com/">
+<meta property="og:image" content="https://torihada-biz.github.io/ppl-select.com/images/anua_product.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beauty Trio Select">
+<meta name="twitter:description" content="KOPHER × Anua × medicube、今注目のスキンケア3ブランドをピックアップしてご紹介。">
+<meta name="twitter:image" content="https://torihada-biz.github.io/ppl-select.com/images/anua_product.webp">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap">
@@ -36,6 +50,10 @@
   }
 
   .page { max-width: 1080px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-direction: column; gap: 40px; }
+
+  .pr-label {
+    text-align: center; font-size: 11px; letter-spacing: .05em; color: var(--ink-faint);
+  }
 
   header { position: relative; text-align: center; padding-bottom: 8px; }
   header::before {
@@ -86,19 +104,11 @@
     background: var(--accent-gradient); color: #fff; font-size: 11px; font-weight: 700;
     display: flex; align-items: center; gap: 4px; letter-spacing: .02em; z-index: 1;
   }
-
-  footer { text-align: center; font-size: 11.5px; color: var(--ink-faint); }
-
-  .toast {
-    position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 120%);
-    background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 999px;
-    font-size: 13px; transition: transform .25s ease; z-index: 50; white-space: nowrap;
-  }
-  .toast.show { transform: translate(-50%, 0); }
 </style>
 </head>
 <body>
 <div class="page">
+  <p class="pr-label">PR</p>
   <header>
     <div class="eyebrow">Brand Showcase</div>
     <h1>KOPHER &times; Anua &times; medicube</h1>
@@ -108,7 +118,7 @@
       <div class="slot logo-slot">
         <img src="images/kopher_logo.webp" alt="KOPHER ロゴ" width="280" height="88" loading="eager">
       </div>
-      <a class="slot image-slot" href="https://www.qoo10.jp/g/1026151513" target="_blank" rel="noopener">
+      <a class="slot image-slot" href="https://www.qoo10.jp/g/1026151513" target="_blank" rel="noopener sponsored">
         <img src="images/kopher_product.webp" alt="KOPHER 商品画像" width="640" height="640" loading="eager">
         <span class="go-badge">詳しく見る</span>
       </a>
@@ -117,7 +127,7 @@
       <div class="slot logo-slot">
         <img src="images/anua_logo.webp" alt="Anua ロゴ" width="280" height="88" loading="lazy">
       </div>
-      <a class="slot image-slot" href="https://www.qoo10.jp/g/983103404" target="_blank" rel="noopener">
+      <a class="slot image-slot" href="https://www.qoo10.jp/g/983103404" target="_blank" rel="noopener sponsored">
         <img src="images/anua_product.webp" alt="Anua 商品画像" width="640" height="640" loading="lazy">
         <span class="go-badge">詳しく見る</span>
       </a>
@@ -126,7 +136,7 @@
       <div class="slot logo-slot">
         <img src="images/medicube_logo.webp" alt="medicube ロゴ" width="280" height="88" loading="lazy">
       </div>
-      <a class="slot image-slot" href="https://www.qoo10.jp/g/1194260755" target="_blank" rel="noopener">
+      <a class="slot image-slot" href="https://www.qoo10.jp/g/1194260755" target="_blank" rel="noopener sponsored">
         <img src="images/medicube_product.webp" alt="medicube 商品画像" width="640" height="640" loading="lazy">
         <span class="go-badge">詳しく見る</span>
       </a>
