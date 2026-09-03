@@ -12,10 +12,8 @@ GitHub Pages で配信している広告用ブランド紹介LPサイト（カ�
 
 ## 計測
 
-- `/cm-a/` に TikTok Pixel（ID: `DAC4ESJC77UCRCTV9K80`、名前「ppl-select.com」）を設置。
-  - ページ表示時: `ttq.page()`（Pageview）
-  - Qoo10 への「詳しく見る」押下時: `ttq.track('ClickButton', {contents:[{content_id: Qoo10商品ID, content_name: ブランド名}]})`
-- `/` には Pixel 未設置。
+- 現在、どのページにも計測タグ（TikTok Pixel 等）は入っていない。
+- 2026-09-03 に `/cm-a/` へ TikTok Pixel（ID: `DAC4ESJC77UCRCTV9K80`）を一度設置したが、同日中に撤去した。再設置する場合はコミット `4d9b81a` の実装（Pageview ＋ Qoo10 CTA の ClickButton）を参照。
 
 ## ページ追加の型
 
@@ -30,6 +28,7 @@ GitHub Pages で配信している広告用ブランド紹介LPサイト（カ�
 
 | 日付 | 対象 | 内容 |
 |---|---|---|
+| 2026-09-03 | /cm-a/ | TikTok Pixel を撤去（計測なしの状態に戻す。Qoo10 リンクの変更は維持） |
 | 2026-09-03 | /cm-a/ | malun malun の Qoo10 リンクを 1069270140 → 1072234942（2＋1箱 メガ割限定ページ）に差し替え |
 | 2026-09-03 | /cm-a/ | TikTok Pixel を設置（Pageview ＋ Qoo10 CTA の ClickButton） |
 | 2026-09-02 | /cm-a/ | malun malun × Isntree の2ブランド版を新規公開、Qoo10 リンク設定、画像を `cm-a/images/` に移動 |
