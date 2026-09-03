@@ -131,7 +131,7 @@
       <div class="slot logo-slot">
         <img src="images/malunmalun_logo.webp" alt="malun malun ロゴ" width="280" height="88" loading="eager">
       </div>
-      <a class="slot image-slot" href="https://www.qoo10.jp/g/1072234942" target="_blank" rel="noopener sponsored">
+      <a class="slot image-slot js-cta" data-brand="malun malun" data-qoo10="1072234942" href="https://www.qoo10.jp/g/1072234942" target="_blank" rel="noopener sponsored">
         <img src="images/malunmalun_product.webp" alt="malun malun 商品画像" width="640" height="640" loading="eager">
         <span class="go-badge">malun malun を見る</span>
       </a>
@@ -140,12 +140,25 @@
       <div class="slot logo-slot">
         <img src="images/isntree_logo.webp" alt="Isntree ロゴ" width="280" height="88" loading="lazy">
       </div>
-      <a class="slot image-slot" href="https://www.qoo10.jp/g/1046521530" target="_blank" rel="noopener sponsored">
+      <a class="slot image-slot js-cta" data-brand="Isntree" data-qoo10="1046521530" href="https://www.qoo10.jp/g/1046521530" target="_blank" rel="noopener sponsored">
         <img src="images/isntree_product.webp" alt="Isntree 商品画像" width="640" height="640" loading="lazy">
         <span class="go-badge">Isntree を見る</span>
       </a>
     </div>
   </div>
 </div>
+<script>
+// Qoo10 への CTA クリックを TikTok Pixel の ClickButton イベントとして送信（商品ID・ブランド名付き）
+document.querySelectorAll('.js-cta').forEach(function (a) {
+  a.addEventListener('click', function () {
+    if (!window.ttq) return;
+    ttq.track('ClickButton', {
+      content_type: 'product',
+      contents: [{ content_id: a.dataset.qoo10, content_name: a.dataset.brand }],
+      description: a.dataset.brand + ' を見る'
+    });
+  });
+});
+</script>
 </body>
 </html>

@@ -13,7 +13,8 @@ GitHub Pages で配信している広告用ブランド紹介LPサイト（カ�
 ## 計測
 
 - `/cm-a/` に TikTok Pixel のベースコードのみ設置（ID: `DAC4ESJC77UCRCTV9K80`、名前「ppl-select.com」）。ページ表示時の Pageview を送る。
-- Qoo10 への CTA クリック（ClickButton）は LP 側のコードではなく、TikTok イベントマネージャーの「イベントビルダー」でボタンの**テキスト**を条件に定義する運用。ブランド別に分けるため CTA 文言は「malun malun を見る」「Isntree を見る」とブランドごとに異なる文言にしている（文言を変えるとイベント定義の再設定が必要）。
+- Qoo10 への CTA クリックは LP 側のコードで `ttq.track('ClickButton', {contents:[{content_id: Qoo10商品ID, content_name: ブランド名}]})` を送る。イベントマネージャーの「イベントの内訳」で content_id 別にブランドの内訳を見られる。
+- TikTok イベントビルダー側に ClickButton の定義を置くと二重カウントになるため、イベントビルダーの定義は使わない（2026-09-03 に一度作成したものは削除）。CTA 文言はブランド別の「malun malun を見る」「Isntree を見る」のまま。
 - `/` には Pixel 未設置。
 
 ## ページ追加の型
@@ -29,6 +30,7 @@ GitHub Pages で配信している広告用ブランド紹介LPサイト（カ�
 
 | 日付 | 対象 | 内容 |
 |---|---|---|
+| 2026-09-03 | /cm-a/ | ClickButton を LP 側コードで商品ID・ブランド名付きで送る方式に確定（イベントビルダー定義は削除して二重カウントを回避） |
 | 2026-09-03 | /cm-a/ | CTA バッジ文言を「詳しく見る」→「malun malun を見る」「Isntree を見る」に変更（TikTok イベントビルダーでブランド別に ClickButton を分けるため） |
 | 2026-09-03 | /cm-a/ | TikTok Pixel のベースコードのみ再設置（クリック計測は TikTok イベントビルダーで定義する方針に変更） |
 | 2026-09-03 | /cm-a/ | TikTok Pixel を撤去（計測なしの状態に戻す。Qoo10 リンクの変更は維持） |
